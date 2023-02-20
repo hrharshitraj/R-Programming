@@ -1,0 +1,101 @@
+/*
+Printing on rStudio
+Class
+charToRaw
+List
+Factor
+Matrix
+cat
+rm
+Data Frame
+*/
+
+a <- "Hello"
+print(a)
+
+v = TRUE
+print(class(v))
+
+v = 23.5
+print(class(v))
+
+v = 23L
+print(class(v))
+
+v = 2i + 5
+print(class(v))
+
+v = charToRaw("HARSHIT")
+print(v)
+
+apple = c('red','green','yellow')     # Vector contains value of same data type
+print(apple)
+print(class(apple))
+
+
+list1 = list(c(2,5,3),24.3,sin)     # list[3] -> sin -> function (x)  .Primitive("sin")
+print(list1)
+# print(list1[1])     # 1st element of list, i,e 2,5,3
+
+# Create a Factor-
+apple_Colors = c('green','green','yellow','red','red','green')
+print(apple_Colors)
+
+# Create a factor Object-
+factor_apple = factor(apple_Colors)
+
+# Unique factors-
+print(factor_apple)     # green red yellow
+
+# Matrix-
+
+m = matrix(c(1:6),nrow=3,ncol=2,byrow=TRUE)    # Horizontal(Row) wise
+print(m)
+
+m = matrix(c(1:6),nrow=3,ncol=2,byrow=FALSE)   # Vertical(Column) wise
+print(m)
+
+m = matrix(c(1:6),nrow=3,ncol=3,byrow=FALSE)   # Not sufficient data
+print(m)
+
+# Warning message:
+# In matrix(c(1:6), nrow = 3, ncol = 3, byrow = FALSE) :
+#  data length differs from size of matrix: [6 != 3 x 3]
+# > print(m)
+# [,1] [,2] [,3]
+# [1,]    1    4    1
+# [2,]    2    5    2
+# [3,]    3    6    3
+
+
+var1 = c(FALSE,1,2,3)    # Assignment using Equal Operator
+print(var1)
+var1 <- c(0,1,2,3)   # # Assignment using Leftward Operator
+print(var1)
+c(0,1,2,TRUE)-> var1  # # Assignment using Rightward Operator
+print(var1)
+
+
+# cat function is also used to print just as print function.
+var1 = c(FALSE,1,2,3)
+cat(var1)
+
+# Delete a variable-
+rm(var1)
+print(var1)   # Error in print(var1) : object 'var1' not found
+
+
+# Data Frame
+BMI <- data.frame(
+  gender = c("Male","Male","Female"),
+  weight = c(68,83,52),
+  age = c(28,42,28)
+)
+
+print(BMI)
+
+# Output-
+# gender weight age
+# 1   Male     68  28
+# 2   Male     83  42
+# 3 Female     52  28
