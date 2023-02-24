@@ -1,0 +1,94 @@
+# Creating an Array-
+# MultiDimensional.
+# It can be used as a Matrix as well.
+
+a <- array(c('green','yellow'),dim=c(3,3,2))
+print(a)
+
+# Arithmetic Operators-
+
+# v <- c(2,6,6)
+# t <- c(8,3,4)
+# print(v+t)      # 10 9 10
+# print(t%%v)     # Remainder Value   0 3 4
+# print(t%/%v)    # Quotient Value    4 0 0
+print(t^v)        # 64  729 4096
+
+# Comparison Operators-
+
+v <- c(2,6,6)
+t <- c(8,3,4)
+print(v<t)      # TRUE FALSE FALSE
+print(v>t)      # FALSE  TRUE  TRUE
+print(v!=t)     # TRUE  TRUE  TRUE
+
+#Logical Operators-
+
+v <- c(3,1,TRUE,2+3i)
+t <- c(4,1,FALSE,2+3i)
+print(!v)     # FALSE FALSE FALSE FALSE
+print(v|t)    # TRUE TRUE TRUE TRUE
+print(v&t)    # TRUE  TRUE FALSE  TRUE (Checks if the class is same)
+
+v1 <- 8
+v2 <- 12
+t <- 1:10
+print(v1 %in% t)    # Checks if v1 lies in t -> TRUE
+print(v2 %in% t)    # Checks if v2 lies in t -> FALSE
+
+# Transpose of a Matrix- (t())
+
+m = matrix(c(2,6,5,1,10,4),nrow=2,ncol=3,byrow=TRUE)
+# print(m)
+# print(t(m))   # Transpose
+# print(m %*% m)   # Error in m %*% m : non-conformable arguments as different sizes
+print(m * m)   # Correct Output
+t <- m %*% t(m)     # Transpose * Original Matrix
+print(t)
+
+# Conditional Statements-
+
+x <- switch(
+  3,   #( 8 -> NULL)
+  "First",
+  "Second",
+  "Third",
+  "Fourth"
+)
+print(x)    # Third
+
+x <- 3L
+if(is.integer(x)) {
+  print("x is an Integer")
+} else {
+  print("x is not an Integer")
+}
+
+v <- c("what","is","truth")       # Case Sensitive
+# if("Truth" %in% v) {      # "truth is not found"
+if("truth" %in% v) {    # truth is found
+  print("truth is found")
+} else {      # You need to write else just after closing the if's bracket
+  print("truth is not found")
+}
+
+if("Truth" %in% v) {    # truth is found
+  print("truth is found first time")
+} else if("truth" %in% v) {
+  print("truth is found seoond time")
+} else {      # You need to write else just after closing the if's bracket
+  print("truth is not found")
+}
+
+# Same Output
+v1 <- c(3,1,TRUE,2+3i)
+v2 <<- c(3,1,TRUE,2+3i)
+v3 = c(3,1,TRUE,2+3i)
+print(v1)
+print(v2)
+print(v3)
+
+c(3,1,TRUE,2+3i) -> v1
+c(3,1,TRUE,2+3i) ->> v2
+print(v1)
+print(v2)
