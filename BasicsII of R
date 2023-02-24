@@ -92,3 +92,23 @@ c(3,1,TRUE,2+3i) -> v1
 c(3,1,TRUE,2+3i) ->> v2
 print(v1)
 print(v2)
+
+a <- 400L
+b <- 542L
+if(a==b) {
+  print("a is equal to b")
+} else if(a > b) {
+  print("a is greater than b")
+} else {
+  print("b is greater than a")
+}
+
+
+a <- 400L
+b <- 542L
+c <- 340L
+if(a > b & c > a) {
+  print("Both conditions are true")
+} else {
+  print("Only one condition is true")
+}
